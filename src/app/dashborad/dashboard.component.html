@@ -1,0 +1,25 @@
+
+<body>
+<div *ngIf="firebase.auth.currentUser != null">
+  <div class="MessageBox">
+    <input class="MessageBox" [(ngModel)]="sendThisMessage">
+    <button class="MessageBox" (click)="firebase.sendMessage(sendThisMessage, selectedRoom)"> Send Message </button>
+    <button (click)="firebase.signOut()">Sign Out</button>
+    <button routerLink="/Room"> New room</button>
+  </div>
+  <mat-card *ngFor="let m of firebase.messages" style="border-style: solid; border-width: 3px; border-color: black; margin: 10px">
+    <mat-card-content >
+      <p >
+        {{m.Message}}
+      </p>
+    </mat-card-content>
+    <mat-card-footer>
+      <div style="margin-left: 7px">
+        {{date(m.Timestamp) }}
+      </div>
+    </mat-card-footer>
+  </mat-card>
+</div>
+
+</body>
+

@@ -1,0 +1,16 @@
+<body class="Primary">
+<div *ngIf="firebase.auth.currentUser">
+
+  <div>
+    <input placeholder="Name" [(ngModel)]="roomName">
+    <button (click)="firebase.createRoom(roomName)">New Room</button>
+  </div>
+  <div *ngFor="let room of firebase.Rooms">
+    <button (click)="firebase.addUserToRoom(firebase.auth.currentUser.uid, room)">{{room.Name}}</button>
+  </div>
+  <br>
+  <button routerLink="/Dashboard"> Back To Dashboard</button>
+
+</div>
+</body>
+

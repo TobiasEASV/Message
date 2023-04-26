@@ -1,0 +1,23 @@
+.Primary{
+  font-weight: bold;
+  margin: 0;
+}
+
+.headerSpan{
+  flex: 1 1 auto;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.Header{
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: cornflowerblue;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.MessageBox {
+  margin: 10px;
+}
+

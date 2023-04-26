@@ -1,0 +1,11 @@
+<body class="Primary">
+<div *ngIf="firebase.auth.currentUser == null">
+  <input placeholder="Email" [(ngModel)]="Email" type="email">
+  <input placeholder="Password" [(ngModel)]="password" type="password">
+  <br>
+  <button (click)="firebase.signIn(Email, password)">Sign In</button>
+  <button (click)="firebase.register(Email, password)">Sign Up</button>
+
+</div>
+</body>
+
